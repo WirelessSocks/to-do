@@ -1,5 +1,5 @@
-import React from "react";
-import Todoitem from "./Todoitem";
+import React, { useState } from "react";
+import Todoitem from "./item/Todoitem";
 
 
 const todos = [
@@ -23,8 +23,11 @@ const todos = [
 
 const Home = () => {
 
+    const [] = useState(todos)
+
     return (
-        <div className="bg-gray-900 h-screen text-white">
+        <div className="text-white w-4/5 mx-auto">
+            <h1 className="text-2xl font-bold text-center mb-8">Todo for junior</h1>
             {todos.map(todo => (
                 <Todoitem key={todo._id} todo= {todo}/>
             ))}
