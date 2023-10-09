@@ -28,7 +28,7 @@ const Home = () => {
     const changeTodo = (id) => {
         const copy = [...todos]
         const current = copy.find(t => t._id === id)
-        current.isComplited = !current.isComplited
+        current.isCompleted = !current.isCompleted
         setTodos(copy)
     }
 
