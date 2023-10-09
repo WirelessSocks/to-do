@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Todoitem from "./item/Todoitem";
 
 
-const todos = [
+const data = [
 {
     _id: 'asdasd1',
     title: "Finish marathon",
@@ -23,13 +23,20 @@ const todos = [
 
 const Home = () => {
 
-    const [] = useState(todos)
+    const [todos, setTodos] = useState(data)
+
+    const changeTodo = (id) => {
+        const copy = [...todos]
+        const current = copy.find(t => t._id === id)
+        current.isComplited = !current.isComplited
+        setTodos(copy)
+    }
 
     return (
         <div className="text-white w-4/5 mx-auto">
             <h1 className="text-2xl font-bold text-center mb-8">Todo for junior</h1>
             {todos.map(todo => (
-                <Todoitem key={todo._id} todo= {todo}/>
+                <Todoitem key={todo._id} todo= {todo} changeTodo= {changeTodo}/>
             ))}
         </div>
     )
