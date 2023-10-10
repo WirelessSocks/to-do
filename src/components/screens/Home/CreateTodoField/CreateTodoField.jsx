@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CreateTodoField = ({setTodos}) => {
+const CreateTodoField = ({ setTodos }) => {
 
     const [title, setTitle] = useState('')
 

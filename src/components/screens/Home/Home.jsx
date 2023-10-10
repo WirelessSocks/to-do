@@ -6,17 +6,17 @@ const data = [
 {
     _id: 'asdasd1',
     title: "Finish marathon",
-    isComplited: false
+    isCompleted: false
 },
 {
     _id: 'asdsdfs24',
     title: "Read the next chapter of the book",
-    isComplited: false
+    isCompleted: false
 },
 {
     _id: 'ahgfhfg42',
     title: "Do the math for the next monday",
-    isComplited: false
+    isCompleted: false
 }
 ]
 
